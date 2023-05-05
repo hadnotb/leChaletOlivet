@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: Alte Haas Grotesk;
+    src: url('../font/AlteHaasGroteskBold.ttf') format('truetype');
+}
+
+*{
+    font-family: Alte Haas Grotesk;
+}
+.siteHeader{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: rgb(193,189,189);
+    background: linear-gradient(0deg, rgba(193,189,189,0) 38%, rgba(135,135,135,0.20630258939513302) 59%, rgba(47,47,47,0.710504270067402) 100%); 
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+    a{
+        color: white;
+        margin: 30px;
+        
+    }
+
+    i{
+        font-size: xx-large;
+    }
+}
+.section{
+    width: 100vw;
+    height: 100vh;
+    position:relative;
+   
+  
+    video{
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+    img{
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center;
+    }
+    .titre{
+        bottom: 61px;
+        left:20px;
+        width: 70vw;
+        position: absolute;
+        color: white;
+        text-shadow: 1px;
+        z-index: 1;
+        font-size: 40px;
+        
+    }
+
+    p{
+        color: white;
+        position:absolute;
+        z-index:2;
+        font-size: 20px;
+    }
+    
+    .title{
+        position: absolute;
+        z-index: 1;
+    }
+     &.left{
+        .title{
+            font-size: 90px;
+            
+            -webkit-text-stroke: 2px #fff;
+            text-stroke: 2px #fff;
+              
+            color:rgba(0, 0, 0, 0);
+            transform: rotate(-90deg);
+            top: 400px;
+            left:-200px;
+        }
+        p{
+            top: 0px;
+            right: 0px;
+        }
+       
+    }
+            
+
+    &.right{
+        .title{
+            font-size: 90px;
+            -webkit-text-stroke: 2px #fff;
+            text-stroke: 2px #fff;
+                
+            color:rgba(0, 0, 0, 0);
+            transform: rotate(90deg);
+            top: 400px;
+            right:-200px;
+        }
+        
+    }
+    
+}
