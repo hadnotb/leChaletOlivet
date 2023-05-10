@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+body {
+  width: 100vw;
+}
+
 @font-face {
   font-family: Alte Haas Grotesk;
   src: url("../font/AlteHaasGroteskBold.ttf") format("truetype");
@@ -14,7 +18,7 @@
 
 .siteHeader {
   height: 100px;
-  width: 100%;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -67,29 +71,134 @@
   z-index: 2;
   font-size: 20px;
 }
-.section .title {
+.section h2 {
+  font-size: 90px;
+  color: white;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
 }
-.section.left .title {
-  font-size: 90px;
-  -webkit-text-stroke: 2px #fff;
-  text-stroke: 2px #fff;
-  color: rgba(0, 0, 0, 0);
-  transform: rotate(-90deg);
-  top: 400px;
-  left: -200px;
+
+.histoire {
+  background-color: #f4f4f4;
+  height: auto;
+  width: 100vw;
+  height: auto;
+  min-height: 100vh;
+  padding: 40px;
 }
-.section.left p {
-  top: 0px;
-  right: 0px;
-}
-.section.right .title {
-  font-size: 90px;
-  -webkit-text-stroke: 2px #fff;
-  text-stroke: 2px #fff;
-  color: rgba(0, 0, 0, 0);
+.histoire h2 {
+  color: black;
+  position: absolute;
+  right: -170px;
+  top: 260px;
   transform: rotate(90deg);
-  top: 400px;
-  right: -200px;
+  font-size: 150px;
+}
+.histoire p {
+  position: relative;
+  color: black;
+  width: 40vw;
+  left: 10px;
+  top: 50px;
+}
+
+.implantation h2 {
+  top: 5px;
+  right: 30px;
+}
+.implantation p {
+  left: 40px;
+  bottom: 40px;
+  width: 60vw;
+}
+
+.accessibilite h2 {
+  top: 5px;
+  right: 30px;
+}
+.accessibilite p {
+  left: 40px;
+  bottom: 40px;
+  width: 60vw;
+}
+
+.chambre h2 {
+  top: 5px;
+  right: 30px;
+}
+.chambre p {
+  left: 40px;
+  bottom: 40px;
+  width: 60vw;
+}
+
+.sdb h2 {
+  top: 5px;
+  right: 30px;
+}
+.sdb p {
+  left: 40px;
+  bottom: 40px;
+  width: 60vw;
+}
+
+.jardin h2 {
+  top: 5px;
+  right: 30px;
+}
+.jardin p {
+  left: 40px;
+  bottom: 40px;
+  width: 60vw;
+}
+
+.privatisation h2 {
+  top: 5px;
+  right: 30px;
+}
+.privatisation p {
+  left: 40px;
+  bottom: 40px;
+  width: 60vw;
+}
+
+.proximite h2 {
+  top: 5px;
+  right: 30px;
+}
+.proximite p {
+  left: 40px;
+  bottom: 40px;
+}
+
+.recommandationContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 20px;
+}
+
+.recommandation {
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-start;
+  flex-wrap: wrap;
+}
+.recommandation h3, .recommandation p {
+  color: black;
+  position: static;
+}
+.recommandation h3 {
+  text-decoration: underline;
+}
+.recommandation p {
+  font-size: medium;
+}
+.recommandation .recommandation-section {
+  margin: 10px;
+  width: 150px;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=style.css.map */
