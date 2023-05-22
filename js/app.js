@@ -11,21 +11,21 @@
 
 
 
-let defaultCursor = document.querySelector(".cursor");
+// let defaultCursor = document.querySelector(".cursor");
 
-window.addEventListener("mousemove", cursor);
-window.addEventListener('click', scale);
+// window.addEventListener("mousemove", cursor);
+// window.addEventListener('click', scale);
 
-function scale(e) {
-  defaultCursor.classList.toggle('click-grow');
-}
+// function scale(e) {
+//   defaultCursor.classList.toggle('click-grow');
+// }
 
-function cursor(e) {
-  defaultCursor.style.top = e.pageY + "px";
-  defaultCursor.style.left = e.pageX + "px";
-}
+// function cursor(e) {
+//   defaultCursor.style.top = e.pageY + "px";
+//   defaultCursor.style.left = e.pageX + "px";
+// }
 
-document.querySelector('.siteHeader-mail').addEventListener("click", function() {
+document.querySelector('.news').addEventListener("click", function() {
   let overlay = document.querySelector("#overlay");
   let embedSU = document.querySelector("#mc_embed_signup");
   console.log(overlay,embedSU);

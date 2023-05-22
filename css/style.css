@@ -20,12 +20,24 @@ body {
   font-family: Joanne regular;
 }
 
+#mce-EMAIL, .mc-field-group {
+  width: 100% !important;
+}
+
+#mc-embedded-subscribe {
+  margin: 0 0 0 15px !important;
+}
+
 #mc_embed_signup {
   background: white;
   clear: left;
-  font: 14px Helvetica, Arial, sans-serif;
+  font-family: Joanne regular;
   width: 600px;
   border-radius: 3px;
+  z-index: 4;
+}
+#mc_embed_signup h2 {
+  font-size: 1rem !important;
 }
 
 .siteHeader {
@@ -48,25 +60,118 @@ body {
 }
 
 .titre {
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
-  width: 100vw;
-  padding-right: 10px;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5170400924) 0%, rgba(235, 235, 235, 0) 51%);
-  z-index: 1;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+}
+.titre h1 {
   color: white;
-  font-size: 90px;
-  text-align: right;
+  font-size: 70px;
+  width: 100%;
+  white-space: nowrap;
+  animation: text2 1s ease;
+}
+.titre p {
+  font-size: 1rem;
+  font-family: Joanne ital;
+  color: white;
+  width: 100%;
+  overflow: hidden;
+  animation: text 0.8s ease;
 }
 
+.nlForm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+
+#popup {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+
+#closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.leChalet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.leChalet a {
+  margin-top: 50px;
+  position: relative;
+  font-family: Joanne regular;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  width: 150px;
+  padding: 5px;
+  background-color: white;
+  border: 3px solid white;
+  border-radius: 3px;
+  z-index: 3;
+  transition: 0.5s ease;
+}
+
+.clear {
+  display: flex !important;
+  justify-content: center !important;
+  margin-bottom: 5px !important;
+}
+
+.news:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.leChalet::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+}
+
+@keyframes text2 {
+  from {
+    color: transparent;
+    transform: translatex(-50px);
+  }
+}
+@media screen and (max-width: 500px) {
+  .titre {
+    font-size: 60px;
+    left: 10px;
+    text-align: left;
+  }
+}
 .section {
   width: 100vw;
   height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
 }
 .section video {
   width: 100vw;
@@ -82,14 +187,6 @@ body {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-}
-.section p {
-  color: white;
-  position: absolute;
-  z-index: 2;
-  font-family: Joanne;
-  font-size: 30px;
-  max-width: 70ch;
 }
 .section h2 {
   font-size: 90px;
@@ -122,75 +219,6 @@ body {
   top: 50px;
 }
 
-.implantation h2 {
-  top: 5px;
-  right: 30px;
-}
-.implantation p {
-  left: 40px;
-  bottom: 40px;
-  width: 60vw;
-}
-
-.accessibilite h2 {
-  top: 5px;
-  right: 30px;
-}
-.accessibilite p {
-  left: 40px;
-  bottom: 40px;
-  width: 60vw;
-}
-
-.chambre h2 {
-  top: 5px;
-  right: 30px;
-}
-.chambre p {
-  left: 40px;
-  bottom: 40px;
-  width: 60vw;
-}
-
-.sdb h2 {
-  top: 5px;
-  right: 30px;
-}
-.sdb p {
-  left: 40px;
-  bottom: 40px;
-  width: 60vw;
-}
-
-.jardin h2 {
-  top: 5px;
-  right: 30px;
-}
-.jardin p {
-  left: 40px;
-  bottom: 40px;
-  width: 60vw;
-}
-
-.privatisation h2 {
-  top: 5px;
-  right: 30px;
-}
-.privatisation p {
-  left: 40px;
-  bottom: 40px;
-  width: 60vw;
-}
-
-.proximite h2 {
-  top: 5px;
-  right: 30px;
-}
-.proximite p {
-  left: 40px;
-  bottom: 40px;
-}
-
 .recommandationContainer {
   display: flex;
   justify-content: center;
@@ -221,40 +249,4 @@ body {
   align-self: flex-start;
   display: flex;
   flex-direction: column;
-}
-
-.nlForm {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 3;
-}
-
-#popup {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  position: relative;
-}
-
-#closeBtn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 500px) {
-  .titre {
-    font-size: 60px;
-    left: 10px;
-    text-align: left;
-  }
 }/*# sourceMappingURL=style.css.map */
