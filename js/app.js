@@ -24,11 +24,11 @@
 //   defaultCursor.style.top = e.pageY + "px";
 //   defaultCursor.style.left = e.pageX + "px";
 // }
+let overlay = document.querySelector("#overlay");
+let embedSU = document.querySelector("#mc_embed_signup");
+let form = document.querySelector("#mc-embedded-subscribe-form");
 
 document.querySelector('.news').addEventListener("click", function() {
-  let overlay = document.querySelector("#overlay");
-  let embedSU = document.querySelector("#mc_embed_signup");
-  console.log(overlay,embedSU);
   overlay.style.display = "flex";
   embedSU.style.display = "block";
  

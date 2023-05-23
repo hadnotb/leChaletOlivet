@@ -17,7 +17,7 @@
     <header class="siteHeader">
         <!-- <a href="" class="siteHeader-logo"></a> -->
         <!-- <a href="#" class="siteHeader-mail"><i class="fa-regular fa-envelope fa-2xl"></i></a> -->
-        <a href="" class="siteHeader-insta"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+        <a href="instagram://user?username=lechaletolivet" class="siteHeader-insta"><i class="fa-brands fa-instagram fa-2xl"></i></a>
     </header>
     <main class="sectionContainer">
         <section class="nlForm" id="overlay">
@@ -35,12 +35,14 @@
                         
                         <div class="mc-field-group">
                             <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
-                            <!-- <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span> -->
-                        </div>
-                        <div id="mce-responses" class="clear foot">
                             
                         </div>
-                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div id="mce-responses" class="clear foot">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+		            <div class="response" id="mce-success-response" style="display:none"></div>
+                            
+                        </div>
+                        
                         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
                                 name="b_1bb0b1e0a53a29e09effbecbf_4ef37896dd" tabindex="-1" value=""></div>
                         <div class="optionalParent">
@@ -52,18 +54,16 @@
                     </div>
                 </form>
             </div>
-            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-            <script
-                type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
+            
         </section>
         <section class="section leChalet">
             <img src="img/Lechalet-1.jpg" alt="">
             <!-- <video id="mainVideo" autoplay loop muted src="img/reeds-152740.mp4"></video> -->
             <div class="titre">
                 <h1 >Le Chalet Olivet</h1>
-                <p>Un morceau d’histoire en plein coeur de la vallée de la Loire, au bord de la rivière.</p>
+                <p>Un morceau d’histoire en plein cœur de la Vallée de la Loire, au bord de la rivière.</p>
             </div>
-            <a class="news">Contacter</a>
+            <a class="news">En savoir plus</a>
           
             <!-- <h2 class="sous-titre">Un morceau d’histoire en plein coeur de la vallée de la Loire, au bord de la rivière</h2>-->
         </section>
@@ -225,6 +225,32 @@
     </main>
     <!-- <div class="cursor"><a href="">Newsletter</a></div> -->
     <footer></footer>
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+    <script type='text/javascript'>
+        (function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);
+        $mcj.extend($mcj.validator.messages, {
+        required: "Ce champs est obligatoire",
+        remote: "Please fix this field.",
+        email: "Veuillez entrer une adresse mail valide.",
+        url: "Please enter a valid URL.",
+        date: "Please enter a valid date.",
+        dateISO: "Please enter a valid date (ISO).",
+        number: "Please enter a valid number.",
+        digits: "Please enter only digits.",
+        creditcard: "Please enter a valid credit card number.",
+        equalTo: "Please enter the same value again.",
+        accept: "Please enter a value with a valid extension.",
+        maxlength: $mcj.validator.format("Please enter no more than {0} characters."),
+        minlength: $mcj.validator.format("Please enter at least {0} characters."),
+        rangelength: $mcj.validator.format("Please enter a value between {0} and {1} characters long."),
+        range: $mcj.validator.format("Please enter a value between {0} and {1}."),
+        max: $mcj.validator.format("Please enter a value less than or equal to {0}."),
+        min: $mcj.validator.format("Please enter a value greater than or equal to {0}."),
+        mc_birthday: "Please enter a valid month and day.",
+        mc_date: "Please enter a valid date.",
+        mc_phone: "Please enter a valid phone number.",
+    });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
     <script src="js/app.js"></script>
 

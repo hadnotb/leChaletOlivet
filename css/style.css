@@ -46,14 +46,13 @@ body {
   width: 100vw;
   display: flex;
   justify-content: flex-start;
-  background: rgb(193, 189, 189);
-  background: linear-gradient(0deg, rgba(193, 189, 189, 0) 38%, rgba(135, 135, 135, 0.2063025894) 59%, rgba(47, 47, 47, 0.7105042701) 100%);
+  background: transparent;
   top: 0;
   z-index: 2;
 }
 .siteHeader a {
   color: white;
-  margin: 2rem 15px 0 1rem;
+  margin: 2rem 15px 0 1.5rem;
 }
 .siteHeader i {
   font-size: 40px;
@@ -71,11 +70,10 @@ body {
   font-size: 70px;
   width: 100%;
   white-space: nowrap;
-  animation: text2 1s ease;
 }
 .titre p {
   font-size: 1rem;
-  font-family: Joanne ital;
+  font-family: Joanne regular;
   color: white;
   width: 100%;
   overflow: hidden;
@@ -153,17 +151,28 @@ body {
   z-index: 1;
 }
 
-@keyframes text2 {
-  from {
-    color: transparent;
-    transform: translatex(-50px);
+#mce-success-response {
+  text-align: center;
+  margin: 2px;
+  padding: 0px !important;
+}
+
+@media screen and (max-width: 750px) {
+  .titre h1 {
+    font-size: 60px;
   }
 }
-@media screen and (max-width: 500px) {
-  .titre {
-    font-size: 60px;
-    left: 10px;
-    text-align: left;
+@media screen and (max-width: 600px) {
+  .titre h1 {
+    font-size: 50px;
+  }
+  .siteHeader i {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .titre h1 {
+    font-size: 35px;
   }
 }
 .section {
