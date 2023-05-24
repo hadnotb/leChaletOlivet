@@ -55,3 +55,21 @@ window.addEventListener("click", function(event) {
   }
 });
 
+// Fonction pour détecter le media query
+function checkMediaQuery() {
+  if (window.matchMedia("(max-width: 450px)").matches) {
+    // Si le media query correspond, changer la source de l'image
+    document.getElementById("mainImage").src = "img/IMG_0696.JPG";
+  } else {
+    // Sinon, restaurer la source de l'image à la valeur par défaut
+    document.getElementById("mainImage").src = "img/Lechalet-1.jpg";
+  }
+}
+
+// Vérifier le media query lors du chargement de la page
+checkMediaQuery();
+
+// Vérifier le media query lors du redimensionnement de la fenêtre
+window.addEventListener("resize", checkMediaQuery);
+
+

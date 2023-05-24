@@ -219,10 +219,17 @@ body{
         }
     }
     .siteHeader{
+        justify-content: flex-start;
         i{
             font-size: 25px;
             margin-left: 5px;
             margin-top: 5px;
+        }
+        &-mail{
+            i{
+            margin-left: -20px;
+
+            }
         }
     }
 }

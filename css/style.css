@@ -196,10 +196,16 @@ body {
   .titre p {
     font-size: 0.8rem;
   }
+  .siteHeader {
+    justify-content: flex-start;
+  }
   .siteHeader i {
     font-size: 25px;
     margin-left: 5px;
     margin-top: 5px;
+  }
+  .siteHeader-mail i {
+    margin-left: -20px;
   }
 }
 .section {
