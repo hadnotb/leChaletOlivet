@@ -21,7 +21,7 @@ body {
 }
 
 .loaderContainer {
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -33,36 +33,14 @@ body {
   z-index: 5;
 }
 
-svg text {
-  text-transform: uppercase;
-  animation: stroke 5s alternate;
-  stroke-width: 0.7;
+.loaderContainer {
+  transition: opacity 1.5s ease-out;
 }
 
-@keyframes stroke {
-  0% {
-    fill: rgba(0, 0, 0, 0);
-    stroke: rgb(0, 0, 0);
-    stroke-dashoffset: 25%;
-    stroke-dasharray: 0% 50%;
-    stroke-width: 0.4;
-  }
-  70% {
-    fill: rgba(0, 0, 0, 0);
-    stroke: rgb(0, 0, 0);
-  }
-  80% {
-    fill: rgb(0, 0, 0);
-    stroke: rgb(0, 0, 0);
-  }
-  100% {
-    fill: rgb(0, 0, 0);
-    stroke: rgba(0, 0, 0, 0);
-    stroke-dashoffset: -25%;
-    stroke-dasharray: 50% 0;
-    stroke-width: 0;
-  }
+.loaderContainer.fade-out {
+  opacity: 0;
 }
+
 #mce-EMAIL, .mc-field-group {
   width: 100% !important;
 }
@@ -89,7 +67,7 @@ svg text {
   height: 100px;
   width: 100vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   background: transparent;
   top: 0;
   z-index: 2;
@@ -172,7 +150,7 @@ svg text {
   align-items: center;
 }
 .leChalet a {
-  margin-top: 50px;
+  margin-top: 15px;
   position: relative;
   font-family: Joanne regular;
   color: white;
@@ -184,6 +162,7 @@ svg text {
   border-radius: 3px;
   z-index: 3;
   transition: 0.5s ease;
+  cursor: pointer;
 }
 
 .clear {
@@ -215,42 +194,6 @@ svg text {
   padding: 0px !important;
 }
 
-@media screen and (max-width: 750px) {
-  .titre h1 {
-    font-size: 60px;
-  }
-  .titre p {
-    font-size: 1.2rem;
-  }
-}
-@media screen and (max-width: 600px) {
-  .titre h1 {
-    font-size: 45px;
-  }
-  .siteHeader i {
-    font-size: 40px;
-  }
-}
-@media screen and (max-width: 450px) {
-  .titre h1 {
-    font-size: 30px;
-    margin-bottom: 3px;
-  }
-  .titre p {
-    font-size: 0.8rem;
-  }
-  .siteHeader {
-    justify-content: flex-start;
-  }
-  .siteHeader i {
-    font-size: 25px;
-    margin-left: 5px;
-    margin-top: 5px;
-  }
-  .siteHeader-mail i {
-    margin-left: -20px;
-  }
-}
 .section {
   width: 100vw;
   height: 100vh;
@@ -334,4 +277,41 @@ svg text {
   align-self: flex-start;
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (max-width: 750px) {
+  .titre h1 {
+    font-size: 60px;
+  }
+  .titre p {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .titre h1 {
+    font-size: 45px;
+  }
+  .siteHeader i {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .titre h1 {
+    font-size: 30px;
+    margin-bottom: 3px;
+  }
+  .titre p {
+    font-size: 0.8rem;
+  }
+  .siteHeader {
+    justify-content: flex-start;
+  }
+  .siteHeader i {
+    font-size: 25px;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+  .siteHeader-mail i {
+    margin-left: -20px;
+  }
 }/*# sourceMappingURL=style.css.map */

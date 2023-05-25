@@ -72,12 +72,23 @@ checkMediaQuery();
 // Vérifier le media query lors du redimensionnement de la fenêtre
 window.addEventListener("resize", checkMediaQuery);
 
+// window.addEventListener('load', function() {
+//   let loaderContainer = document.querySelector('.loaderContainer');
+//   let svg = document.querySelector('.loaderContainer svg');
+//   svg.addEventListener('animationend', function(){
+//     loaderContainer.style.display = 'none';
+//   })
+// });
+
 window.addEventListener('load', function() {
   let loaderContainer = document.querySelector('.loaderContainer');
-  let svg = document.querySelector('.loaderContainer svg');
-  svg.addEventListener('animationend', function(){
-    loaderContainer.style.display = 'none';
-  })
+  loaderContainer.classList.add('fade-out');
+  setTimeout(function() {
+    loaderContainer.style.opacity = '0'; // Réglez directement l'opacité à 0
+    setTimeout(function() {
+      loaderContainer.style.display = 'none';
+    }, 1500); // Attendez 0,5 seconde après avoir réglé l'opacité pour cacher complètement l'élément
+  }, 400);
 });
 
 function checkLinkAvailability() {
