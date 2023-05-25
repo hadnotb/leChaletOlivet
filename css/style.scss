@@ -19,7 +19,52 @@ body{
 *{
     font-family: Joanne regular;
 }
+// LOADER
+.loaderContainer{
+    background-color: white;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left:0;
+    z-index: 5;
+}
 
+// svg path{
+//     fill:none;
+//     stroke: #000000;
+//     stroke-width:1px;
+//     stroke-dasharray: 400;
+//     stroke-dashoffset: 400;
+//     opacity: 0;
+//     animation: 4s text-outline infinite alternate;
+//   }
+ 
+//   @keyframes text-outline{
+//     from{
+//       opacity: 0;
+//       stroke-dashoffset: 400;
+//     }
+//     to{
+//       opacity: 1;
+//       stroke-dashoffset: 0;
+//     }
+//   }
+svg text {
+	text-transform: uppercase;
+	animation: stroke 5s alternate;
+	stroke-width: 0.7;
+}
+@keyframes stroke {
+	0% {  fill: rgba(0,0,0,0); stroke: rgba(0,0,0,1); stroke-dashoffset: 25%; stroke-dasharray: 0% 50%; stroke-width: 0.4;}
+	70% { fill: rgba(0,0,0,0); stroke: rgba(0,0,0,1)}
+	80% { fill: rgba(0,0,0,1); stroke: rgba(0,0,0,1)}
+	100% {fill: rgba(0,0,0,1); stroke: rgba(0,0,0,0); stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0.0;}
+}
+// LOADER
 #mce-EMAIL, .mc-field-group{
     width: 100%!important;
 }
@@ -146,11 +191,11 @@ body{
         margin-top: 50px;
         position: relative;
         font-family: Joanne regular;
-        color: rgb(0, 0, 0);
+        color: white;
         text-align: center;
         width: 150px;
         padding: 5px;
-        background-color: white;
+        background-color: transparent;
         border: 3px solid white;
         border-radius: 3px;
         z-index:3;
@@ -164,8 +209,8 @@ body{
     margin-bottom:5px!important;
 }
 .news:hover{
-    background-color: transparent;
-    color:white;
+    background-color: white;
+    color:black;
 
 }
 .leChalet::before{

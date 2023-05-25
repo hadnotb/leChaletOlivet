@@ -72,4 +72,30 @@ checkMediaQuery();
 // Vérifier le media query lors du redimensionnement de la fenêtre
 window.addEventListener("resize", checkMediaQuery);
 
+window.addEventListener('load', function() {
+  let loaderContainer = document.querySelector('.loaderContainer');
+  let svg = document.querySelector('.loaderContainer svg');
+  svg.addEventListener('animationend', function(){
+    loaderContainer.style.display = 'none';
+  })
+});
 
+function checkLinkAvailability() {
+  var link = document.querySelector('.siteHeader-insta');
+  
+  // Vérifier si le lien fonctionne en utilisant une requête AJAX
+  var xhr = new XMLHttpRequest();
+  xhr.open('HEAD', link.href, true);
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 0) {
+        // Le lien n'est pas disponible, effectuer une redirection
+        link.href = 'https://www.instagram.com/lechaletolivet/';
+      }
+    }
+  };
+  xhr.send();
+}
+
+// Appeler la fonction de vérification après le chargement de la page
+window.addEventListener('DOMContentLoaded', checkLinkAvailability);
