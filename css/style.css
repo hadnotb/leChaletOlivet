@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -62,51 +63,6 @@ body {
   font-size: 1rem !important;
 }
 
-.siteHeader {
-  position: fixed;
-  height: 100px;
-  width: 100vw;
-  display: flex;
-  justify-content: flex-start;
-  background: transparent;
-  top: 0;
-  z-index: 2;
-}
-.siteHeader a {
-  color: white;
-  width: 40px;
-  height: 40px;
-  margin: 10px 10px;
-}
-.siteHeader i {
-  margin: 0;
-  width: 40px;
-  height: 40px;
-  font-size: 40px;
-}
-
-.titre {
-  max-width: 80%;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
-  z-index: 3;
-}
-.titre h1 {
-  color: white;
-  font-size: 70px;
-  width: 100%;
-  white-space: wrap;
-}
-.titre p {
-  font-size: 1.5rem;
-  font-family: Joanne regular;
-  color: white;
-  width: 100%;
-  overflow: hidden;
-  animation: text 0.8s ease;
-}
-
 #mc_embed_signup_scroll {
   position: relative;
   padding: 10px;
@@ -144,48 +100,10 @@ body {
   cursor: pointer;
 }
 
-.leChalet {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.leChalet a {
-  margin-top: 15px;
-  position: relative;
-  font-family: Joanne regular;
-  color: white;
-  text-align: center;
-  width: 150px;
-  padding: 5px;
-  background-color: transparent;
-  border: 3px solid white;
-  border-radius: 3px;
-  z-index: 3;
-  transition: 0.5s ease;
-  cursor: pointer;
-}
-
 .clear {
   display: flex !important;
   justify-content: center !important;
   margin-bottom: 5px !important;
-}
-
-.news:hover {
-  background-color: white;
-  color: black;
-}
-
-.leChalet::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.15);
-  z-index: 1;
 }
 
 #mce-success-response {
@@ -194,18 +112,38 @@ body {
   padding: 0px !important;
 }
 
+.siteHeader {
+  position: fixed;
+  height: 100px;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  background: transparent;
+  top: 0;
+  z-index: 2;
+}
+.siteHeader a {
+  color: white;
+  width: 40px;
+  height: 40px;
+  margin: 10px 10px;
+}
+.siteHeader i {
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+}
+
+.news:hover {
+  background-color: white;
+  color: black;
+}
+
 .section {
   width: 100vw;
   height: 100vh;
   position: relative;
-  display: flex;
-  flex-direction: column;
-}
-.section video {
-  width: 100vw;
-  height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .section img {
   position: absolute;
@@ -216,35 +154,172 @@ body {
   -o-object-position: center;
      object-position: center;
 }
-.section h2 {
-  font-size: 90px;
-  color: white;
+.section-content {
   position: absolute;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  font-size: 25px;
+}
+
+.sectionVoile::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+.leChalet-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.leChalet-content p {
+  font-size: 40px;
   z-index: 2;
+  padding: 20px;
+  width: 70%;
 }
 
 .histoire {
-  background-color: #f4f4f4;
-  height: auto;
   width: 100vw;
+  position: static;
   height: auto;
-  min-height: 100vh;
-  padding: 40px;
+}
+.histoire img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.histoire .histoire-section {
+  height: auto;
+  position: static;
+  display: flex;
+  padding: 50px;
 }
 .histoire h2 {
+  flex-grow: 1;
   color: black;
-  position: absolute;
-  right: -170px;
-  top: 260px;
-  transform: rotate(90deg);
   font-size: 150px;
+  writing-mode: sideways-lr; /* Écriture verticale de bas en haut */
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
-.histoire p {
-  position: relative;
+.histoire .histoire-paragraphe {
+  flex-grow: 1;
   color: black;
-  width: 40vw;
-  left: 10px;
-  top: 50px;
+  width: 65vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 25px;
+}
+
+.implantation-content {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.implantation-content p {
+  width: 65vw;
+  z-index: 2;
+  padding: 20px;
+}
+
+.chambre-content {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.chambre-content p {
+  width: 65vw;
+  padding: 20px;
+}
+
+.sdb-content {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.sdb-content p {
+  width: 65vw;
+  z-index: 2;
+  padding: 20px;
+  text-align: right;
+}
+
+.jardin-content {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.jardin-content p {
+  width: 65vw;
+  z-index: 2;
+  padding: 20px;
+}
+
+.proximite-content {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+.proximite-info {
+  padding: 20px;
+}
+
+.privatisation-content {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.privatisation-info {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.privatisation-info button {
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 25px;
+  padding: 10px;
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: ease-in-out 0.2s;
+}
+.privatisation-info button:hover {
+  border: 2px solid rgb(178, 178, 178);
+  color: rgb(178, 178, 178);
+}
+.privatisation-info a {
+  cursor: pointer;
+  margin-right: 20px;
+}
+.privatisation-info p {
+  width: 45vw;
 }
 
 .recommandationContainer {
@@ -257,8 +332,10 @@ body {
 
 .recommandation {
   display: flex;
+  width: 100%;
   justify-content: space-around;
-  align-content: flex-start;
+  align-items: center;
+  align-content: center;
   flex-wrap: wrap;
 }
 .recommandation h3, .recommandation p {
@@ -273,7 +350,7 @@ body {
 }
 .recommandation .recommandation-section {
   margin: 10px;
-  width: 150px;
+  width: 170px;
   align-self: flex-start;
   display: flex;
   flex-direction: column;

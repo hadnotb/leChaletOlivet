@@ -30,10 +30,10 @@ let form = document.querySelector("#mc-embedded-subscribe-form");
 let input = document.querySelector('#mce-EMAIL');
 
 
-document.querySelector('.news').addEventListener("click", function() {
-  overlay.style.display = "flex";
-  embedSU.style.display = "block";
-});
+// document.querySelector('.news').addEventListener("click", function() {
+//   overlay.style.display = "flex";
+//   embedSU.style.display = "block";
+// });
 
 document.getElementById("closeBtn").addEventListener("click", function() {
   document.getElementById("overlay").style.display = "none";

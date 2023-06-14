@@ -1,3 +1,6 @@
+@import './variable.scss';
+
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -6,6 +9,7 @@
 body{
     width: 100vw;
 }
+
 @font-face {
     font-family: Joanne regular;
     src: url('../font/JoanneTrial/Otf/Joanne-Regular\ Trial.otf') format('truetype');
@@ -40,6 +44,7 @@ body{
     opacity: 0;
   }
 
+// NEWSLETTER
 #mce-EMAIL, .mc-field-group{
     width: 100%!important;
 }
@@ -59,60 +64,6 @@ body{
         font-size: 1rem!important;
  
     }
-}
-.siteHeader{
-    position: fixed;
-    // opacity: 0;
-    // transition: opacity 0.3s ease; 
-    height: 100px;
-    width: 100vw;
-    display: flex;
-    justify-content: flex-start;
-    background: transparent;
-   
-    top: 0;
-    z-index: 2;
-
-    a{
-        color: white;
-        width: 40px;
-        height: 40px;
-        margin: 10px 10px;
-        
-    }
-
-    i{
-        margin: 0;
-        width: 40px;
-        height: 40px;
-        font-size: 40px;
-        
-    }
-}
-.titre{
-    
-    
-    max-width:80%;
-    text-align: center;
-    overflow: hidden;
-    position:relative;
-    z-index: 3;
-    h1{
-        color: white;
-        font-size: 70px;
-        width: 100%;
-        white-space: wrap;
-    }
-    p{
-        font-size: 1.5rem;
-        font-family: Joanne regular;
-        color: white;
-        width: 100%;
-        overflow: hidden;
-        animation: text 0.8s ease;
-
-
-    } 
 }
 
 #mc_embed_signup_scroll{
@@ -152,39 +103,85 @@ body{
     font-size: 24px;
     cursor: pointer;
 }
-.leChalet{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    a{
-        margin-top: 15px;
-        position: relative;
-        font-family: Joanne regular;
-        color: white;
-        text-align: center;
-        width: 150px;
-        padding: 5px;
-        background-color: transparent;
-        border: 2px solid white;
-        border-radius: 3px;
-        z-index:3;
-        transition: 0.5s ease;
-        cursor: pointer;
-    }
-    
-}
+
 .clear{
     display: flex!important;
     justify-content: center!important;
     margin-bottom:5px!important;
 }
+
+#mce-success-response{
+    text-align: center;
+    margin: 2px;
+    padding: 0px!important;
+    
+}
+// :::::::::::::::::::::::::::::::::::
+
+.siteHeader{
+    position: fixed;
+    // opacity: 0;
+    // transition: opacity 0.3s ease; 
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-start;
+    background: transparent;
+   
+    top: 0;
+    z-index: 2;
+
+    a{
+        color: white;
+        width: 40px;
+        height: 40px;
+        margin: 10px 10px;
+        
+    }
+
+    i{
+        margin: 0;
+        width: 40px;
+        height: 40px;
+        font-size: 40px;
+        
+    }
+}
+
 .news:hover{
     background-color: white;
     color:black;
 
 }
-.leChalet::before{
+
+
+
+.section{
+    width: 100vw;
+    height: 100vh;
+    position:relative;
+   
+
+    img{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center;
+        
+    }
+    
+    &-content{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        color: white;
+        font-size: $titleSize;
+    }
+    
+}
+// Le Chalet
+.sectionVoile::before{
     content:'';
     position: absolute;
     width: 100%;
@@ -192,75 +189,170 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: rgba(0, 0, 0, 0.25);
     z-index: 1;
 
 }
-#mce-success-response{
-    text-align: center;
-    margin: 2px;
-    padding: 0px!important;
-    
-}
-
-.section{
-    width: 100vw;
-    height: 100vh;
-    position:relative;
+.leChalet-content{
     display: flex;
     flex-direction: column;
-    
-    
-   
-  
-    video{
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
+    justify-content: flex-end;
+    align-items: flex-end;
+    p{
+        font-size: $bigTitleSize;
+        z-index: 2;
+        padding: 20px;
+        width: 70%;
     }
+}
+
+.histoire{
+    // background-color: #f4f4f4;
+    width: 100vw;
+    position:static;
+    height: auto;
+    
     img{
         position: absolute;
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-        object-position: center;
+        top: 0;
+        left: 0;
+        z-index: 0;
     }
-    
-    
-     
+    .histoire-section{
+        height: auto;
+        position: static;
+        display: flex;
+        padding: 50px;
         
-    h2{
-        font-size: 90px;
-        // color:rgba(0, 0, 0, 0);
-        color: white;
-        position: absolute;
-        z-index: 2;
-    
     }
-    
-}
-.histoire{
-    background-color: #f4f4f4;
-    height: auto;
-    width: 100vw;
-    height: auto;
-    min-height: 100vh;
-    padding: 40px;
     h2{
-        color: black;   
-        position: absolute;
-        right: -170px;
-        top: 260px;
-        transform: rotate(90deg);
-        font-size: 150px
-    }
-    p{
-        position: relative;
+        flex-grow: 1;
         color: black;
-        width:40vw;
-        left: 10px;
-        top:50px;
+        font-size: 150px;
+        writing-mode: sideways-lr; /* Écriture verticale de bas en haut */
+        text-align: right;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+    }
+    .histoire-paragraphe{
+        flex-grow: 1;
+        color: black;
+        width:65vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: $titleSize;
         
+    }
+    
+   
+}
+.implantation{
+    &-content{
+        z-index:2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        p{
+            width: 65vw;
+            z-index:2;
+            padding: 20px;
+        }
+    }
+}
+.chambre{
+    &-content{
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        p{
+            width: 65vw;
+            padding: 20px;
+        }
+    }
+}
+.sdb{
+    &-content{
+        z-index:2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        p{
+            width: 65vw;
+            z-index:2;
+            padding: 20px;
+            text-align: right;
+        }
+    }
+}
+.jardin{
+    &-content{
+        z-index:2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        p{
+            width: 65vw;
+            z-index:2;
+            padding: 20px;
+        }
+    }
+}
+.proximite{
+    &-content{
+        z-index:2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    &-info{
+        padding: 20px;
+    }
+}
+.privatisation{
+    &-content{
+        z-index:2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    &-info{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        button{
+            border: 2px solid white;
+            background-color: #ffffff00;
+            font-size: $titleSize;
+            padding: 10px;
+            color: white;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: ease-in-out .2s;
+
+        }
+        button:hover{
+            border: 2px solid rgb(178, 178, 178);
+            color: rgb(178, 178, 178);
+        }
+        a{
+            cursor: pointer;
+            margin-right: 20px;
+        }
+        p{
+            width: 45vw;
+        }
     }
 }
 
@@ -274,9 +366,10 @@ body{
 }
 .recommandation{
     display: flex;
+    width: 100%;
     justify-content: space-around;
-    // align-items: center;
-    align-content: flex-start;
+    align-items: center;
+    align-content: center;
     flex-wrap:  wrap;
     h3, p{
         color: black;
@@ -291,11 +384,10 @@ body{
     }
     .recommandation-section{
         margin: 10px;
-        width: 150px;
+        width: 170px;
         align-self: flex-start;
         display: flex;
-        flex-direction: column;
-       
+        flex-direction: column;   
     }
 }
 @media screen and (max-width : 750px){
