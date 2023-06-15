@@ -9,6 +9,9 @@
 body{
     width: 100vw;
 }
+html{
+    scroll-snap-type: y mandatory;
+}
 
 @font-face {
     font-family: Joanne regular;
@@ -22,6 +25,13 @@ body{
 
 *{
     font-family: Joanne regular;
+}
+.scroll-snap{
+    scroll-snap-align: start;
+}
+footer{
+    scroll-snap-align: end;
+
 }
 // LOADER
 .loaderContainer{
@@ -125,12 +135,21 @@ body{
     height: 100px;
     width: 100vw;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
     background: transparent;
-   
     top: 0;
     z-index: 2;
+    padding: 20px;
+    h1{
+        color: white;
+    }
 
+    .siteHeader-action{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
     a{
         color: white;
         width: 40px;
@@ -139,13 +158,32 @@ body{
         
     }
 
-    i{
-        margin: 0;
+    
+    img{
         width: 40px;
         height: 40px;
-        font-size: 40px;
-        
     }
+    .cta-reservez{
+        width: 165px;
+    }
+    button{
+        text-decoration: none;
+        border: 2px solid white;
+        background-color: #ffffff00;
+        font-size: $subTitleSize;  
+        padding: 10px;
+        color: white;
+        border-radius: 2px;
+        cursor: pointer;
+        transition: ease-in-out .2s;
+        white-space: nowrap;
+
+    }
+    button:hover{
+        border: 2px solid rgb(178, 178, 178);
+        color: rgb(178, 178, 178);
+    }
+    
 }
 
 .news:hover{
@@ -180,7 +218,7 @@ body{
     }
     
 }
-// Le Chalet
+Le Chalet
 .sectionVoile::before{
     content:'';
     position: absolute;
@@ -197,12 +235,12 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: flex-start;
     p{
         font-size: $bigTitleSize;
         z-index: 2;
         padding: 20px;
-        width: 70%;
+        width: 80%;
     }
 }
 
@@ -271,7 +309,7 @@ body{
         justify-content: center;
         align-items: flex-start;
         p{
-            width: 65vw;
+            width: 100vw;
             padding: 20px;
         }
     }
@@ -284,7 +322,7 @@ body{
         justify-content: center;
         align-items: flex-end;
         p{
-            width: 65vw;
+            width: 100vw;
             z-index:2;
             padding: 20px;
             text-align: right;
@@ -299,7 +337,7 @@ body{
         justify-content: center;
         align-items: flex-start;
         p{
-            width: 65vw;
+            width: 100vw;
             z-index:2;
             padding: 20px;
         }
@@ -389,6 +427,30 @@ body{
         display: flex;
         flex-direction: column;   
     }
+}
+
+.decoupage{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    &-section{
+        align-self: flex-start;
+    }
+}
+footer{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    .footer-news{
+
+    }
+    .footer-news:hover{
+        cursor: pointer;
+    }
+   
 }
 @media screen and (max-width : 750px){
     .titre{

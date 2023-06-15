@@ -1,4 +1,4 @@
-// var image = document.querySelectorAll('img');
+// var image = document.querySelectorAll('.parralax');
 // console.log(image);
 // new simpleParallax(image,{
 // 	speed: 1.5, // vitesse de défilement plus rapide
@@ -30,10 +30,10 @@ let form = document.querySelector("#mc-embedded-subscribe-form");
 let input = document.querySelector('#mce-EMAIL');
 
 
-// document.querySelector('.news').addEventListener("click", function() {
-//   overlay.style.display = "flex";
-//   embedSU.style.display = "block";
-// });
+document.querySelector('.footer-news').addEventListener("click", function() {
+  overlay.style.display = "flex";
+  embedSU.style.display = "block";
+});
 
 document.getElementById("closeBtn").addEventListener("click", function() {
   document.getElementById("overlay").style.display = "none";
@@ -110,3 +110,4 @@ function checkLinkAvailability() {
 
 // Appeler la fonction de vérification après le chargement de la page
 window.addEventListener('DOMContentLoaded', checkLinkAvailability);
+
