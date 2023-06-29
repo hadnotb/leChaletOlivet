@@ -56,21 +56,21 @@ window.addEventListener("click", function(event) {
 });
 
 // Fonction pour détecter le media query
-function checkMediaQuery() {
-  if (window.matchMedia("(max-width: 450px)").matches) {
-    // Si le media query correspond, changer la source de l'image
-    document.getElementById("mainImage").src = "img/IMG_0696.JPG";
-  } else {
-    // Sinon, restaurer la source de l'image à la valeur par défaut
-    document.getElementById("mainImage").src = "img/Lechalet-1.jpg";
-  }
-}
+// function checkMediaQuery() {
+//   if (window.matchMedia("(max-width: 450px)").matches) {
+//     // Si le media query correspond, changer la source de l'image
+//     document.getElementById("mainImage").src = "img/IMG_0696.JPG";
+//   } else {
+//     // Sinon, restaurer la source de l'image à la valeur par défaut
+//     document.getElementById("mainImage").src = "img/Lechalet-1.jpg";
+//   }
+// }
 
 // Vérifier le media query lors du chargement de la page
-checkMediaQuery();
+// checkMediaQuery();
 
 // Vérifier le media query lors du redimensionnement de la fenêtre
-window.addEventListener("resize", checkMediaQuery);
+// window.addEventListener("resize", checkMediaQuery);
 
 // window.addEventListener('load', function() {
 //   let loaderContainer = document.querySelector('.loaderContainer');
@@ -110,4 +110,26 @@ function checkLinkAvailability() {
 
 // Appeler la fonction de vérification après le chargement de la page
 window.addEventListener('DOMContentLoaded', checkLinkAvailability);
+
+
+// Sélectionnez votre élément de header
+var header = document.querySelector('.siteHeader');
+
+var prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+
+  // Vérifiez si le défilement est vers le bas et cachez le header avec une animation
+  if (prevScrollpos > currentScrollPos) {
+    header.style.top = '0';
+    header.style.transition = 'top 0.3s';
+  } else {
+    // Vérifiez si le défilement est vers le haut et affichez le header avec une animation
+    header.style.top = '-100px';
+    header.style.transition = 'top 0.3s';
+  }
+
+  prevScrollpos = currentScrollPos;
+};
 

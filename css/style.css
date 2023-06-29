@@ -201,7 +201,7 @@ footer {
   font-size: 25px;
 }
 
-Le Chalet .sectionVoile::before {
+.sectionVoile::before {
   content: "";
   position: absolute;
   width: 100%;
